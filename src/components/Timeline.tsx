@@ -36,22 +36,8 @@ const Timeline = ({ timeline }: ExperienceProps) => {
             onMouseLeave={() => setHover(null)}
           >
             <div className="flex items-center justify-between md:gap-8">
-              <span className="max-md:hidden">0{index + 1}</span>
               <div className="md:text-5xl text-xl md:font-semibold flex-1">
                 {exp.jobTitle}
-              </div>
-              <div className="max-md:text-sm max-md:flex flex-col text-foreground/50">
-                <span className="italic">
-                  {formatDate(exp.startDate).month +
-                    ", " +
-                    formatDate(exp.startDate).year}
-                </span>
-                <span className="max-md:hidden">{" - "}</span>
-                <span className="italic">
-                  {formatDate(exp.endDate).month +
-                    ", " +
-                    formatDate(exp.endDate).year}
-                </span>
               </div>
             </div>
             <div className="md:pl-12 py-2 text-foreground/50 max-md:text-sm flex items-center justify-between">

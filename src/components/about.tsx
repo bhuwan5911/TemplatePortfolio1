@@ -88,7 +88,6 @@ const TimelineCard = ({
       className="flex items-center justify-between gap-4 cursor-pointer select-none"
       onClick={() => setActiveIndex(index)}
     >
-      <span>0{index + 1}</span>
       <span className="text-xl md:text-3xl font-bold flex-1">
         {timeline.jobTitle}
       </span>
@@ -119,19 +118,6 @@ const TimelineCard = ({
         <div className="max-md:text-sm">
           <span>{timeline.company_name}</span>
           <span>{timeline.jobLocation}</span>
-        </div>
-        <div className="max-md:text-xs">
-          <span className="italic">
-            {formatDate(timeline.startDate).month +
-              ", " +
-              formatDate(timeline.startDate).year}
-          </span>
-          {" - "}
-          <span className="italic">
-            {formatDate(timeline.endDate).month +
-              ", " +
-              formatDate(timeline.endDate).year}
-          </span>
         </div>
       </div>
       <ul className="list-disc list-inside">
